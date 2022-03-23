@@ -16,11 +16,11 @@ Chúng ta sẽ hiện thực theo trình tự xôi thịt (chạy đựoc, quick
 
 ### Trình tự 
 
-- Làm theo kiểu xôi thịt [monad_transformer_naive_way](./monad_transformer_naive_way.hs)
+- Làm theo kiểu xôi thịt [monad_transformer_naive_way](./haskell/monad_transformer_naive_way.hs)
 
-- Phiên bản cải tiến hơn, có in ra lý do lỗi [monad_transformer_improve_1](./monad_transformer_improve_1.hs) version, print out why the validation failed
+- Phiên bản cải tiến hơn, có in ra lý do lỗi [./haskell/monad_transformer_improve_1](./monad_transformer_improve_1.hs) version, print out why the validation failed
 
-- Phiên bản sử dụng monad transformer [monad_transformer_improve_2](./monad_transformer_improve_2.hs), chúng ta giam duoc rat nhieu boilerplate code
+- Phiên bản sử dụng monad transformer [./haskell/monad_transformer_improve_2](./monad_transformer_improve_2.hs), chúng ta giam duoc rat nhieu boilerplate code
 
 ### Cách chạy
 ```
@@ -40,8 +40,15 @@ ghci
 
 ### Monad transformer tutorial
 
-- Come up with naive approach [monad_transformer_naive_way](./monad_transformer_naive_way.hs)
+- Come up with naive approach [./haskell/monad_transformer_naive_way](./monad_transformer_naive_way.hs)
 
-- Then, [monad_transformer_improve_1](./monad_transformer_improve_1.hs) version, print out why the validation failed
+- Then, [./haskell/monad_transformer_improve_1](./monad_transformer_improve_1.hs) version, print out why the validation failed
 
-- Finally, [monad_transformer_improve_2](./monad_transformer_improve_2.hs) `case ... of` pattern matching
+- Finally, [./haskell/monad_transformer_improve_2](./monad_transformer_improve_2.hs) `case ... of` pattern matching
+
+
+### Reference
+
+- [Adam McCullough - Monad Transformers for the Easily Confused - λC 2018
+](https://www.youtube.com/watch?v=SMj-n2f7wYY&t=1781s&ab_channel=LambdaConf)
+- [Why monad can't compose](https://youtu.be/EWTQfRQugBY?t=5204)
