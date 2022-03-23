@@ -16,11 +16,35 @@ Chúng ta sẽ hiện thực theo trình tự xôi thịt (chạy đựoc, quick
 
 ### Trình tự 
 
-- Làm theo kiểu xôi thịt [monad_transformer_naive_way](./haskell/monad_transformer_naive_way.hs)
+- Làm theo kiểu xôi thịt [monad_transformer_naive_way](./haskell/monad_transformer_naive_way.hs#L44)
+```
+getUserInfo :: IO (Maybe UserInfo)
+getUserInfo = do
+    name <- getName
+    case name of
+        Nothing -> return Nothing
+        Just name' -> do
+            age <- getAge
+            case age of
+                Nothing -> return Nothing
+                Just age' -> do
+                    address <- getAddress
+                    case address of
+                        Nothing -> return Nothing
+                        Just address' -> return $ Just $ UserInfo name' age' address'
+```
 
-- Phiên bản cải tiến hơn, có in ra lý do lỗi [./haskell/monad_transformer_improve_1](./monad_transformer_improve_1.hs) version, print out why the validation failed
+- Phiên bản cải tiến hơn, có in ra lý do lỗi [./haskell/monad_transformer_improve_1](./haskell/monad_transformer_improve_1.hs) version, print out why the validation failed
 
-- Phiên bản sử dụng monad transformer [./haskell/monad_transformer_improve_2](./monad_transformer_improve_2.hs), chúng ta giam duoc rat nhieu boilerplate code
+- Phiên bản sử dụng monad transformer [./haskell/monad_transformer_improve_2](./haskell/monad_transformer_improve_2.hs#L51), chúng ta giam duoc rat nhieu boilerplate code
+```
+getUserInfo :: ExceptT Error IO UserInfo
+getUserInfo = do
+    name <- getName
+    age <- getAge
+    address <- getAddress
+    return $ UserInfo name age address
+```
 
 ### Cách chạy
 ```
@@ -40,11 +64,11 @@ ghci
 
 ### Monad transformer tutorial
 
-- Come up with naive approach [./haskell/monad_transformer_naive_way](./monad_transformer_naive_way.hs)
+- Come up with naive approach [./haskell/monad_transformer_naive_way](./haskell/monad_transformer_naive_way.hs)
 
-- Then, [./haskell/monad_transformer_improve_1](./monad_transformer_improve_1.hs) version, print out why the validation failed
+- Then, [./haskell/monad_transformer_improve_1](./haskell/monad_transformer_improve_1.hs) version, print out why the validation failed
 
-- Finally, [./haskell/monad_transformer_improve_2](./monad_transformer_improve_2.hs) `case ... of` pattern matching
+- Finally, [./haskell/monad_transformer_improve_2](./haskell/monad_transformer_improve_2.hs) `case ... of` pattern matching
 
 
 ### Reference
