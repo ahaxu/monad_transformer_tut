@@ -38,7 +38,7 @@ getAddress = do
 type Name = String
 type Age = Int
 type Address = String
-data UserInfo = UserInfo Name Age String
+data UserInfo = UserInfo Name Age Address
     deriving Show
 
 getUserInfo :: IO (Maybe UserInfo)

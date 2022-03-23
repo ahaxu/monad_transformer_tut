@@ -19,7 +19,7 @@ type Age = Int
 type Address = String
 
 data UserInfo =
-    UserInfo Name Age String
+    UserInfo Name Age Address
     deriving Show
 
 getName :: ExceptT Error IO String
