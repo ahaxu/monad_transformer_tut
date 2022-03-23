@@ -34,7 +34,7 @@ getUserInfo = do
                         Just address' -> return $ Just $ UserInfo name' age' address'
 ```
 
-- Phiên bản cải tiến hơn, có in ra lý do lỗi [./haskell/monad_transformer_improve_1](./haskell/monad_transformer_improve_1.hs) version, print out why the validation failed
+- Phiên bản cải tiến hơn, có in ra lý do lỗi [./haskell/monad_transformer_improve_1](./haskell/monad_transformer_improve_1.hs) version, in ra tại sao validate failed (dùng Either data type)
 
 - Phiên bản sử dụng monad transformer [./haskell/monad_transformer_improve_2](./haskell/monad_transformer_improve_2.hs#L51), chúng ta giam duoc rat nhieu boilerplate code
 ```
@@ -62,7 +62,7 @@ ghci
 
 ```
 
-### Monad transformer tutorial
+### [EN] Monad transformer tutorial
 
 - Come up with naive approach [./haskell/monad_transformer_naive_way](./haskell/monad_transformer_naive_way.hs)
 
@@ -71,7 +71,7 @@ ghci
 - Finally, [./haskell/monad_transformer_improve_2](./haskell/monad_transformer_improve_2.hs) `case ... of` pattern matching
 
 
-### Reference
+#### Reference
 
 - [Adam McCullough - Monad Transformers for the Easily Confused - λC 2018
 ](https://www.youtube.com/watch?v=SMj-n2f7wYY&t=1781s&ab_channel=LambdaConf)
