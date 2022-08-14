@@ -19,8 +19,9 @@ data UserInfo =
     deriving Show
 
 getName :: IO (Either Error Name)
+-- public static Name getName () throw Error
 getName = do
-    name <- prompt "your name"
+    name <- prompt "your name" -- name :: String
     if name == "" then
         return $ Left "no name"
     else
@@ -45,7 +46,7 @@ getAddress = do
 
 getUserInfo :: IO (Either Error UserInfo)
 getUserInfo = do
-    name <- getName
+    name <- getName -- Either Error UserInfo
     case name of
         Left err -> return $ Left err
         Right name' -> do
