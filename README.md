@@ -1,3 +1,9 @@
+## Monad transformer
+
+### Link youtube bài giảng liên quan 
+
+https://youtu.be/QO8J8vMy7Cc
+
 ### Ví dụ đơn giản về monad transformer
 
 Ở ví dụ này, chúng ta làm đơn giản một chuơng trình, yêu cầu nhập vào `tên`, `tuổi`, `địa chỉ`
